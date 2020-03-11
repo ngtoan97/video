@@ -3,8 +3,8 @@
 
 window.onload = function()
 {
-    $('.video').append('<video autoplay width="60%" height="60%"  class="leftVideo" title="chrome.mp4" playsinline loop  onclick="stopStreamedVideo(0)" >\n' +
-                    '        <source src="video/chrome.mp4" type="video/mp4"/>\n' +
+    $('.video').append('<video autoplay width="60%" height="60%"  class="leftVideo" title="video/chrome1-0000.ts" playsinline loop  onclick="stopStreamedVideo(0)" >\n' +
+                    '        <source src="video/chrome1.mp4" type="video/mp4"/>\n' +
                     '        <p>This browser does not support the video element.</p>\n' +
                     '    </video>');
 };
@@ -57,8 +57,18 @@ navigator.mediaDevices.getUserMedia(mediaStreamConstraints)
 function nextVideo() {
     $('.video').empty();
     $('.video').append('<video autoplay width="60%" height="60%"  class="leftVideo" title="chrome1.mp4" playsinline loop  onclick="stopStreamedVideo(0)" >\n' +
-                    '        <source src="video/chrome1.mp4" type="video/mp4"/>\n' +
-                    '        <p>This browser does not support the video element.</p>\n' +
-                    '    </video>')
+        '        <source src="video/chrome1.mp4" type="video/mp4"/>\n' +
+        '        <p>This browser does not support the video element.</p>\n' +
+        '    </video>')
     console.log('next video');
+}
+
+
+function backVideo() {
+    $('.video').empty();
+    $('.video').append('<video autoplay width="60%" height="60%"  class="leftVideo" title="chrome.mp4" playsinline loop  onclick="stopStreamedVideo(0)" >\n' +
+        '        <source src="video/chrome.mp4" type="video/mp4"/>\n' +
+        '        <p>This browser does not support the video element.</p>\n' +
+        '    </video>')
+    console.log('back video');
 }
